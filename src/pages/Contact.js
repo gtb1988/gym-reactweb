@@ -27,7 +27,7 @@ const Contact = () => {
             <textarea className="form-control" id="exampleFormControlTextarea1" placeholder='Meaasage' rows="3"></textarea>
           </div>
           <div className="mb-3">
-          <button class="button">Submit</button>
+          <button className="button">Submit</button>
           </div>
           </div>
         </div>
