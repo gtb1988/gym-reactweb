@@ -2,7 +2,7 @@ import React from 'react'
 
 const PriceboxCard = (props) => {
   return (
-        <div className='col-sm-4'>
+        <div className='col-md-4'>
         <div className='pricebox'>
                 <div className='prc-blackbg'>
                         <h2>{props.title}</h2>

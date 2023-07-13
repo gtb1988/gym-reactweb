@@ -134,9 +134,16 @@ h2{
 .portbox {
 	width: 25%;
   position: relative;
+  overflow: hidden;
 }
 .portbox img {
 	width: 100%;
+  -webkit-transition: .5s cubic-bezier(.51,.37,.15,.88);
+-o-transition: .5s cubic-bezier(.51,.37,.15,.88);
+transition: .5s cubic-bezier(.51,.37,.15,.88);
+}
+.portbox:hover img{
+  transform: scale(1.5);
 }
 .cardtitle a{ color: #fff; text-decoration: none; font-weight:800; text-transform: uppercase;}
 
@@ -190,4 +197,660 @@ h2{
 .reise-section .button:hover, .baner-data .button:hover, .button-s button:hover  {
 	background-color: #fff;
 	color: #000;
+}
+.banner-slider{
+  position: absolute;
+right: 0;
+display: inline-block;
+width: 65%;
+top: -117px;
+overflow: hidden;
+}
+.banner-slider .slick-slide img {
+	width: 100%;
+}
+
+
+/*=========== Header Section css ==============*/
+.topcontact{
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: right;
+  border-bottom: 1px solid #393939;
+  z-index: 1;
+}
+.header-s{
+  display: grid;
+  grid-template-columns: 0rem 1fr 5fr 1fr 0rem;
+  align-items: center;
+  z-index: 1;
+  padding: 1.5rem 0;
+}
+.logo{
+  display: grid;
+  grid-column: 2/3;
+}
+.navebar{
+  display: grid;
+  grid-column: 3/4;
+  justify-content: center;
+  align-items: center;
+}
+.navebar ul{
+  display: flex;
+  gap: 5rem;
+  margin: 0;
+  padding: 0;
+}
+.navebar ul li {
+list-style: none;
+}
+.navebar ul li a {
+color: #fff;
+text-decoration: none;
+font-size: 1.4rem;
+text-transform: uppercase;
+font-weight: 600;
+}
+
+.button-s{
+  display: grid;
+  grid-column: 4/5;
+  justify-content: flex-end;
+  
+}
+.button-s button {
+background-color: #B4E300;
+border: none;
+font-size: 1.4rem;
+text-transform: uppercase;
+width: 150px;
+height: 40px;
+}
+.menuicon{
+  display: none;
+}
+
+
+
+@media (max-width: 991px) {
+  .menuicon{
+      display: block;
+  }
+  .navebar{
+      right: 0;
+      top: 0;
+      width: 300px;
+      min-height: 100vh;
+      background: #000;
+      position: fixed;
+      transform: translateX(100vw);
+      transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+      padding: 3rem 4rem;
+      z-index: 8;
+      overflow: auto;
+      display: inline;
+  }
+  .navebar.mobile-menu {
+      display: block;
+      transform: translateX(0);
+  }
+  .navebar.mobile-menu ul{
+      display: inline-block;
+  }
+  .navebar ul {
+      display: inherit;
+  }
+
+  .header-s {
+      display: flex;
+      justify-content: space-between;
+  }
+  .navebar.mobile-menu ul {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+  }
+} 
+
+
+
+/*============= Benefits-Section css==========*/
+.benefits-section {
+	background-color: #000;
+}
+.sr-data {
+	color: #BABABA;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+}
+.sr-data a{ text-decoration: none;}
+.sr-data h2 {
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 700;
+    margin-bottom: 1.8rem;
+}
+.img-wp {
+	width: 100px;
+	margin: auto;
+	margin-bottom: 4rem;
+	height: 100px;
+}
+.benefits-section {
+	background-color: #000;
+	position: relative;
+	padding: 1rem 0;
+  overflow: hidden;
+}
+.benefits-section::before {
+	font-size: 28rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #121212;
+	-webkit-text-fill-color: transparent;
+	line-height: normal;
+	box-sizing: border-box;
+	position: absolute;
+	content: "BENEFITS";
+	text-align: center;
+	top: -37px;
+  left: 0;
+  right: 0;
+}
+.img-wp img {
+	width: 100%;
+}
+
+
+/*======== Price section css ========*/
+
+.pricebox {
+	box-shadow: 0 0 32px #a4a2a2;
+	width: 85%;
+	margin: auto;
+}
+.prc-blackbg {
+	background: #000;
+	padding: 4rem;
+	text-align: center;
+	color: #fff;
+}
+.prc-blackbg h2 {
+	font-size: 2.2rem;
+	margin-bottom: 0;
+	color: #fff;
+}
+.prc-blackbg span {
+	font-size: 1.3rem;
+}
+.prc-blackbg figure {
+	font-size: 5.5rem;
+	font-weight: 600;
+	position: relative;
+	margin-bottom: 0;
+	line-height: normal;
+}
+.price-section {
+	padding: 10rem 0;
+}
+.pricebox ul {
+	margin: 0;
+	padding: 0;
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 10rem;
+}
+.pricebox ul li {
+	list-style: none;
+	font-size: 1.8rem;
+	color: #000;
+    text-align: left;
+    position: relative;
+    padding-left: 25px;
+}
+.pricebox ul li::before {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 17px;
+	height:17px;
+	content: "";
+    transform: translateY(-50%);
+	background-size: 100%;
+	background-image: url(../src/assets/check.svg);
+	background-repeat: no-repeat;
+}
+.liststyle {
+	padding: 5rem 8rem;
+    text-align: center;
+}
+.divider {
+	width: 104px;
+	margin: 28px auto;
+	border-color: #c3f408;
+	opacity: 100;
+}
+
+/*========= Hero Section css ===========*/
+.hero-section{
+  background-color: #000000;
+position: relative;
+}
+.banner-img {
+position: relative;
+width: 100%;
+height: 80vh;
+}
+.banner-img::before {
+display: none;
+position: absolute;
+top: -117px;
+right: 0;
+content: "";
+background-image: url(../src/assets/banner.jpg);
+background-repeat: no-repeat;
+background-size: 100%;
+width: 65%;
+height: 100%;
+}
+
+.baner-data {
+position: relative;
+}
+
+.baner-data span {
+font-size: 12.2rem;
+font-weight: 900;
+text-transform: uppercase;
+color: transparent;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: white;
+-webkit-text-fill-color: transparent;
+line-height: normal;
+box-sizing: border-box;
+}
+.baner-data figure {
+font-weight: 900;
+color: #fff;
+text-transform: uppercase;
+font-size: 5.5rem;
+margin-bottom: 6rem;
+}
+.baner-data {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+}
+
+.blur {
+background-color: #CAFF00;
+position: absolute;
+border-radius: 50%;
+filter: blur(215px);
+width: 40rem;
+height: 50rem;
+opacity: 0.1;
+}
+.blure1 {
+right: 48%;
+bottom: 132px;
+opacity: 0.1;
+}
+
+
+
+/*============== Gallery Section Css ==============*/
+.glimg{width: 100%;
+	-webkit-transition: .5s cubic-bezier(.51,.37,.15,.88);
+-o-transition: .5s cubic-bezier(.51,.37,.15,.88);
+transition: .5s cubic-bezier(.51,.37,.15,.88);
+}
+.gl-div:hover img {
+	-webkit-transform: scale(1.5);
+	-ms-transform: scale(2.01);
+	transform: scale(1.5);
+}
+.gallery-main {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.gl-div {
+	width: 33.4%;
+    position: relative;
+	overflow: hidden;
+}
+.gl-title {
+	position: absolute;
+	bottom: 6rem;
+    left: 0;
+	background: #000;
+	padding: 2rem 10rem 2rem 4rem;
+	color: #fff;
+    text-transform: uppercase;  
+    text-decoration: none;
+	overflow:hidden;
+}
+.gl-title::before {
+	position: absolute;
+	top: 0;
+	left:0%;
+	width: 100%;
+	content: "";
+	background: #c3f408;
+	height: 100%;
+	transform: translateX(100vw);
+	transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+}
+.gl-div:hover a::before {
+	width: 100%;
+	transform: translateX(0vw);
+	transition: transform 0.2s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+	
+}
+.gl-div:hover a{ color:#000;}
+.gl-title span {
+	font-size: 1.2rem;
+	position:relative;
+}
+.gl-title figure {
+	font-size: 2.2rem;
+	font-weight: 600;
+    position: relative;
+}
+.gl-title figure::before {
+	position: absolute;
+	top: 0;
+	right: -64px;
+	width: 30px;
+	height: 30px;
+	content: "";
+	background-size: 100%;
+	background-image: url(../src/assets/arrow.svg);
+	background-repeat: no-repeat;
+}
+
+/*============== Raise css ===============*/
+.reise-section {
+	padding: 15rem 0;
+}
+.left-r {
+	width: 60%;
+}
+.right-r {
+	width: 25%;
+	
+}
+.right-r img {
+	width: 100%;
+}
+.left-r .button {
+	margin-top: 4rem;
+}
+.sct-divider {
+  display: flex;
+	justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+@media screen and (max-width: 1599px) {
+  .benefits-section::before {
+    font-size: 25rem;
+  }
+}
+
+
+@media screen and (max-width: 1399px) {
+  html {
+    font-size: 52.5%;
+  }
+  .benefits-section::before {
+    font-size: 25rem;
+  }
+  .baner-data span {
+    font-size: 10.2rem;
+  }
+  .baner-data figure {
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .img-wp img {
+    width: 100%;
+  }
+  .img-wp {
+    width: 81px;
+    height: 80px;
+    display: flex;
+  }
+  .liststyle {
+    padding: 5rem 4rem;
+  }
+}
+
+@media screen and (max-width: 1099px) {
+  html {
+    font-size: 45.5%;
+  }
+  .banner-img {
+    height: 50vh;
+  }
+  .inner-banne h1 {
+    font-size: 7.5rem;
+  }
+  .inner-banne {
+    height: 300px;
+  }
+  .navebar ul li a {
+    font-size: 1.8rem;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .menuicon {
+    width: 50px;
+  }
+  .menuicon svg {
+    stroke: #000;
+  }
+  .menu-s{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+  }
+  .menuicon {
+    background: #fff;
+    padding: 5px;
+    width: 40px;
+    margin-right: 9px;
+  }
+  .button-s button {
+    font-size: 1.9rem;
+    height: 40px;
+    font-weight: 600;
+  }
+  .banner-slider {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    width: 58%;
+    top: 0;
+    overflow: hidden;
+  }
+  .topcontact {
+    font-size: 2rem;
+    padding: 0.5rem 0;
+  }
+  .navebar ul li a {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #000;
+}
+.navebar.mobile-menu {
+	display: block;
+	transform: translateX(0);
+	background: #fff;
+}
+.gl-title figure::before {
+	right: -27px;
+	width: 15px;
+	height: 15px;
+}
+.gl-title figure {
+	font-size: 1.4rem;
+}
+.gl-title {
+	padding: 1rem 7rem 1rem 3rem;
+}
+.pricebox {
+	width: 97%;
+}
+.baner-data span {
+	font-size: 8.2rem;
+}
+.banner-img {
+	height: 40vh;
+}
+.baner-data figure {
+	margin-bottom: 2rem;
+}
+.blur {
+	display: none;
+}
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 50.5%;
+  }
+  .banner-slider {
+    width: 100%;
+    text-align: center;
+  }
+  .baner-data {
+    text-align: center;
+    left: 0;
+    width: 100%;
+  }
+  .baner-data span {
+    font-size: 6.2rem;
+  }
+  .sr-data {
+    margin-bottom: 6rem;
+  }
+  .pricebox {
+    width: 97%;
+    max-width: 300px;
+    margin-bottom: 50px;
+  }
+  .button {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  .sr-data {
+    margin-bottom: 6rem;
+    border: 1px solid #333;
+    border-radius: 23px;
+    padding: 5rem;
+  }
+  .benefits-section::before {
+    font-size: 9rem;
+    top: 0;
+  }
+  .sct-divider {
+    flex-wrap: wrap;
+  }
+  .left-r, .right-r {
+    width: 100%;
+  }
+  .right-r {
+    margin-bottom: 27px;
+  }
+  .gallery-main {
+    flex-wrap: wrap;
+  }
+  .gl-div {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+  .gl-title span {
+    font-size: 1.8rem;
+  }
+  .gl-title figure {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 2.9rem;
+    margin-bottom: 2rem;
+  }
+  .blackbg {
+    padding: 0 5rem;
+  }
+  .prc-blackbg h2 {
+    font-size: 3.7rem;
+  }
+  .prc-blackbg span {
+    font-size: 1.9rem;
+  }
+  .benefits-section::before {
+    display: none;
+  }
+  .reise-section {
+    padding: 7rem 0 15rem 0;
+  }
+  .blur {
+    display: none;
+  }
+  .banner-img {
+    height: 40vh;
+    overflow: hidden;
+  }
+  .benefits-section {
+    padding: 7rem 0 0 0;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .baner-data span {
+    font-size: 4.2rem;
+  }
+  .baner-data figure {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .logo img {
+    width: 100px;
+  }
+  .button-s button {
+    font-size: 1.3rem;
+    height: 33px;
+    font-weight: 600;
+    width: 90px;
+  }
+  .menuicon {
+    background: #fff;
+    padding: 0px;
+    width: 31px;
+    margin-right: 4px;
+  }
+  .blackbg {
+    padding: 0 3rem;
+  }
+  .gl-title figure {
+    font-size: 2.4rem;
+  }
 }

@@ -1,6 +1,8 @@
 import React from "react";
 import Header from '../Header/Header'
 import './Hero.css';
+import Bannerslider from "../Slider/Bannerslider";
+
 
 const Hero = () => {
   return (
@@ -9,6 +11,7 @@ const Hero = () => {
         <div className="blur"> &nbsp; </div>
           <div className="banner-s">
               <div className="banner-img">
+                <Bannerslider />
                 <div className="container">
                     <div className="baner-data">
                       <span>Discipline and</span>

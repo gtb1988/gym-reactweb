@@ -4,7 +4,7 @@ const BenefitsCard = (props) => {
   return (
         <>
           
-                <div className='col-sm-3'>
+                <div className='col-md-3'>
                     <div className='sr-data'>
                         <a href='#'>
                         <div className='img-wp'><img src={props.img} /></div>
