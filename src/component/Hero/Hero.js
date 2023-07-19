@@ -20,7 +20,7 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
-              <div className="blur blure1"> &nbsp; </div>
+              
           </div>
       </div>
     </>

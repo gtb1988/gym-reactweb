@@ -8,7 +8,7 @@ const Header = () => {
     
   return (
     <>
-          <div className='blackbg'>
+          <div className='header blackbg'>
             <div className='topcontact relative'>
                 <div className='container'>123.456.7890</div>
             </div>

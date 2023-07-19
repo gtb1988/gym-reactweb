@@ -9,7 +9,7 @@ import Portimg8 from '../assets/Portimg8.jpg'
 
 
 
-const PortfolioData = {
+const PortfolioData = {                                                                                                                                                                                                                                                                          
         Portgallery:[
             {
                 id:1,

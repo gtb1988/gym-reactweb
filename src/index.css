@@ -279,23 +279,23 @@ height: 40px;
   }
   .navebar{
       right: 0;
-      top: 0;
-      width: 300px;
+      top: 0px;
+      width: 360px;
       min-height: 100vh;
-      background: #000;
+      background: #fff;
       position: fixed;
       transform: translateX(100vw);
-      transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+      transition: transform 0.2s cubic-bezier(0.56, 0.1, 0.34, 0.91);
       padding: 3rem 4rem;
       z-index: 8;
       overflow: auto;
       display: inline;
   }
-  .navebar.mobile-menu {
+  .menus.mobile-menu .navebar {
       display: block;
       transform: translateX(0);
   }
-  .navebar.mobile-menu ul{
+  .menus.mobile-menu ul{
       display: inline-block;
   }
   .navebar ul {
@@ -306,7 +306,7 @@ height: 40px;
       display: flex;
       justify-content: space-between;
   }
-  .navebar.mobile-menu ul {
+  .menus.mobile-menu ul {
       display: flex;
       flex-direction: column;
       gap: 2rem;
@@ -603,6 +603,11 @@ transition: .5s cubic-bezier(.51,.37,.15,.88);
 
 
 
+
+
+
+
+
 @media screen and (max-width: 1599px) {
   .benefits-section::before {
     font-size: 25rem;
@@ -675,6 +680,10 @@ transition: .5s cubic-bezier(.51,.37,.15,.88);
     padding: 5px;
     width: 40px;
     margin-right: 9px;
+    height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
   }
   .button-s button {
     font-size: 1.9rem;
@@ -728,6 +737,33 @@ transition: .5s cubic-bezier(.51,.37,.15,.88);
 }
 .blur {
 	display: none;
+}
+.menus.mobile-menu a.menuicon svg{ display: none;}
+.menus.mobile-menu a.menuicon{ position: relative;}
+.menus.mobile-menu a.menuicon::after {
+	position: absolute;
+	left: 8px;
+	content: "+";
+	color: #000;
+	font-size: 6.5rem;
+	font-weight: 200;
+	rotate: 44deg;
+}
+
+
+.menus.mobile-menu .popup-bg {
+	width: 100%;
+	background: rgba(0,0,0,0.5) !important;
+	display: inline-block;
+	height: 100vh;
+  position: fixed;
+  top:0;
+  left: 0;
+}
+.menus.mobile-menu a.menuicon {
+	position: absolute;
+	right: 0;
+  top: 0;
 }
 }
 
@@ -820,6 +856,10 @@ transition: .5s cubic-bezier(.51,.37,.15,.88);
   .benefits-section {
     padding: 7rem 0 0 0;
   }
+  .navebar {
+    top: 100px;
+  }
+  
 }
 
 @media screen and (max-width: 479px) {
@@ -854,3 +894,4 @@ transition: .5s cubic-bezier(.51,.37,.15,.88);
     font-size: 2.4rem;
   }
 }
+
